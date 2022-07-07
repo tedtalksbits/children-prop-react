@@ -12,8 +12,17 @@ export default function App() {
           <>
             <fieldset>
               <p>I am a child but i have access to my...</p>
-              <div>{state}</div>
-              <button onClick={() => setState("new State")}>
+              <div>{state.username}</div>
+              <button
+                onClick={() =>
+                  setState({
+                    ...state,
+                    username: "michael",
+                    user_img:
+                      "https://resources.premierleague.com/premierleague/photos/players/250x250/p84450.png"
+                  })
+                }
+              >
                 change state
               </button>
             </fieldset>
